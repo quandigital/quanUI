@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     
     var sourceFiles = [
-        // 'vendor/jquery.js',
+        'vendor/jquery.js',
         'vendor/jquery.initialize.js',
         '_getClasses.js',
         '_calcProgress.js',
@@ -39,8 +39,7 @@ module.exports = function(grunt) {
                     includePaths: require('node-bourbon').includePaths
                 },
                 files: {
-                    '<%= cssDest %>/normalize.css': '<%= cssSrc %>/normalize.scss',
-                    '<%= cssDest %>/style.css': '<%= cssSrc %>/index.scss'
+                    '<%= cssDest %>/quanui.min.css': '<%= cssSrc %>/index.scss'
                 }        
             },
             dev: {
@@ -49,7 +48,6 @@ module.exports = function(grunt) {
                     includePaths: require('node-bourbon').includePaths
                 },
                 files: {
-                    '<%= cssDest %>/normalize.css': '<%= cssSrc %>/normalize.scss',
                     '<%= cssDest %>/style.css': '<%= cssSrc %>/index.scss'
                 }
             }

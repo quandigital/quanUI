@@ -1,0 +1,11 @@
+{
+    "name": "quanui",
+    "version": "1.0.0",
+    "main": [
+        "dist/css/quanui.min.css",
+        "dist/js/quanui.min.js"
+    ],
+    "ignore": [
+        "src"
+    ]
+}
