@@ -10,6 +10,7 @@
         ".gitignore",
         "Gruntfile.js",
         "index.html",
-        "package.json"
+        "package.json",
+        "bower.json"
     ]
 }
