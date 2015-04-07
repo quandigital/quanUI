@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Crawl Abnehmen.net 2015</title>
+    <link rel="stylesheet" href="dist/css/style.css" />
+</head>
+
+<body>
+<header>
+    <h1>Crawl Abnehmen.net 2015</h1>
+        <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/user/logout">Logout</a></li>
+        </ul>
+    </nav>
+    </header>
+
+
+
+<div class="main-container">
+    <section id="stats">
+        <h3>Stats</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Input</th>
+                    <th>Done</th>
+                    <th>Found</th>
+                    <th>Progress</th>
+                    <th>Start/Stop</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PENDING</td>
+                    <td>1125829</td>
+                    <td>1125828</td>
+                    <td>69076</td>
+                    <td>
+                        <progress value="1125828" max="1125829"></progress>
+                    </td>
+                    <td>
+                        <input class="start-stop-button" data-crawlid="16" type="button" value="Stop">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="edit">
+        <h3>Edit</h3>
+        <form method="post">
+            <label>
+                Priority
+                <input type="number" placeholder="Priority" name="crawl[priority]" value="1">
+            </label>
+            <label>
+                Search Pattern
+                <input type="text" placeholder="Pattern" name="crawl[searchPattern]" value="abnehmen.net">
+            </label>
+            <input type="submit">
+        </form>
+    </section>
+
+    <section class="uploads">
+        <h3>Uploads</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>File</th>
+                    <th>Imported</th>
+                    <th>Progress</th>
+                    <th>Uploaded</th>
+                    <th>Imported</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="wrap">SEOkicks_backlinks_abnehmen.net_2015-03-03.csv</td>
+                    <td>0</td>
+                    <td>
+                        <progress></progress>
+                    </td>
+                    <td>2015-03-03 16:14:47</td>
+                    <td>2015-03-03 16:14:54</td>
+                </tr>
+                    <tr>
+                    <td class="wrap">www-abnehmen-net_20150303T161027Z_ExternalLinks_LinkingDomains.csv</td>
+                    <td>0</td>
+                    <td>
+                        <progress value=""></progress>
+                    </td>
+                    <td>2015-03-03 16:14:47</td>
+                    <td>2015-03-03 16:14:54</td>
+                </tr>
+                    <tr>
+                    <td class="wrap">links_abnehmen-net.csv</td>
+                    <td>3649</td>
+                    <td>
+                        <progress value=".8"></progress>
+                    </td>
+                    <td>2015-03-03 16:14:47</td>
+                    <td>2015-03-03 16:18:00</td>
+                </tr>
+                    <tr>
+                    <td class="wrap">www-abnehmen-net_20150303T161031Z_ExternalLinks_SampleLinks.csv</td>
+                    <td>8331</td>
+                    <td>
+                        <progress value=".77" class="error test-class"></progress>
+                    </td>
+                    <td>2015-03-03 16:14:48</td>
+                    <td>2015-03-03 16:25:43</td>
+                </tr>
+                    <tr>
+                    <td class="wrap">www-abnehmen-net_20150303T161029Z_ExternalLinks_SampleLinks.csv</td>
+                    <td>8331</td>
+                    <td>
+                        <progress value="1" class="success"></progress>
+                    </td>
+                    <td>2015-03-03 16:14:48</td>
+                    <td>2015-03-03 16:33:53</td>
+                </tr>
+                    <tr>
+                    <td class="wrap">abnehmen.net-backlinks-subdomains-03-Mar.csv</td>
+                    <td>115</td>
+                    <td>
+                        <progress value="1"></progress>
+                    </td>
+                    <td>2015-03-03 16:14:48</td>
+                    <td>2015-03-03 16:25:53</td>
+                </tr>
+                    <tr>
+                    <td class="wrap">download_historical_abnehmen_net_03_Mar_15_3431F267E9DC97B067700DD2C8CF2D73.csv</td>
+                    <td>1512604</td>
+                    <td>
+                        <progress value="1"></progress>
+                    </td>
+                    <td>2015-03-03 16:15:17</td>
+                    <td>2015-03-04 12:58:58</td>
+                </tr>
+                    <tr>
+                    <td class="wrap">www-abnehmen-net_20150303T161027Z_ExternalLinks_LinkingDomains.csv</td>
+                    <td>0</td>
+                    <td>
+                        <progress value="1"></progress>
+                    </td>
+                    <td>2015-03-03 16:17:54</td>
+                    <td>2015-03-03 16:33:55</td>
+                </tr>
+                    <tr>
+                    <td class="wrap">SEOkicks_backlinks_abnehmen.net_2015-03-03(1).csv</td>
+                    <td>1000</td>
+                    <td>
+                        <progress value="1"></progress>
+                    </td>
+                    <td>2015-03-03 16:18:49</td>
+                    <td>2015-03-03 16:34:45</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="add-files">
+        <h3>Add CSV Files</h3>
+        <div>
+            <input id="fileupload" type="file" accept="text/csv" name="files[]" multiple="">
+        </div>
+        <div>
+            <progress id="upload-progress" value="0"></progress>
+            <div id="files" class="files"></div>
+        </div>
+    </section>
+
+    <section>
+    <nav>
+        <a href="16/result">Result</a>
+        <a href="16/export">Export</a>
+    </nav>
+    </section>
+
+    <input type="hidden" name="crawlId" value="16">
+</div>
+
+<script src="src/js/vendor/jquery.js"></script>
+<script src="dist/js/quanui.min.js"></script>
+<!-- <script src="/assets/js/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="/assets/js/vendor/spin.js/spin.js"></script>
+<script src="/assets/js/vendor/spin.js/jquery.spin.js"></script>
+<script src="/assets/js/vendor/twig.js/twig.js"></script>
+    <script src="/assets/js/vendor/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+    <script src="/assets/js/vendor/blueimp-file-upload/js/jquery.fileupload.js"></script>
+    <script src="/assets/js/crawl/crawl.js"></script> -->
+
+
+</body></html>

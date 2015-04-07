@@ -1,0 +1,76 @@
+$table-accent: $gray-light;
+$table-border-color: $gray-light;
+
+table {
+    font: {
+        size: 1.1em;
+    }
+    border: {
+        collapse: collapse;
+        spacing: 0;
+    }
+    width: 100%;
+    margin: {
+        top: 1em;
+        bottom: 1em;
+    }
+}
+
+    thead, 
+    tfoot {
+        border: {
+            left: 1px solid $dark;
+            right: 1px solid $dark;
+        }
+        background-color: $dark;
+    }
+
+    thead {
+        border-top: 1px solid $dark;
+        border-bottom: none;
+        font-weight: 600;
+        color: $white;
+        th {
+            padding: $padding $padding-sm;
+            text-align: left;
+        }
+    }
+
+    tfoot {
+        border-bottom: 1px solid $dark;
+        td {
+            font-size: 3em;
+            &[colspan] {
+                font-size: .75em;
+            }
+        }
+        & ~ tbody {
+            border-bottom: 0;    
+        }
+    }
+
+    tbody {
+        border: 1px solid $table-border-color;
+        tr {
+            background-color: lighten($table-accent, 4);
+            @include transition-duration(.3s);
+            border-top: 1px dashed $white;
+            &:first-of-type {
+                border-top: 0;
+            }
+            &:hover {
+                background-color: $table-accent;
+                @include transition-duration(.3s);
+            }
+        }
+    }
+
+    td {
+        padding: $padding-sm;
+        color: $dark;
+        border: 1px solid $white;
+    }
+
+    .wrap {
+        word-break: break-all;
+    }

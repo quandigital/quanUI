@@ -1,0 +1,13 @@
+section {
+    @include grid-column(12);
+    background-color: $white;
+    padding: $padding;
+    margin-bottom: $padding;
+    h1, 
+    h2, 
+    h3,
+    h4 {
+        border-bottom: 1px solid $gray-dark;
+        margin-bottom: 1em;
+    }
+}

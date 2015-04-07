@@ -1,0 +1,68 @@
+$progress-color: $blue;
+$progress-error: $red;
+$progress-success: $green;
+
+progress {
+    @include appearance(none);
+    visibility: hidden;
+}
+
+.progress-container {
+    @include grid-column(10);
+    position: relative;
+    top: 11px;
+    height: $padding;
+    border: 1px solid $white;
+    border-radius: 3px;
+}
+
+    .progress-value {
+        @include grid-column(2);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        margin-left: 5px;
+        font-size: 14px;
+        line-height: 15px;
+        z-index: 1; 
+    }
+
+    .progress-bar {
+        background-color: $progress-color; 
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 3px;
+        &.indeterminate {
+           @include background(linear-gradient(-45deg, 
+                                   transparent 33%, rgba($progress-color, .1) 33%, 
+                                   rgba($progress-color, .1) 66%, transparent 66%));
+            background-color: rgba($progress-color, .2);
+            background-size: 35px 20px, 100% 100%, 100% 100%;
+            @include animation(animate-stripes 4s linear infinite);
+        }
+        &.success,
+        &.finished, 
+        &.done {
+            background-color: $progress-success;
+        }
+        &.error {
+            background-color: $progress-error;
+            width: 100% !important;
+        }
+        &:not(.error):not(.success):not(.finished):not(.done):not(.indeterminate) {
+            &:before {
+                content: "";
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: #fff;
+                @include animation(animate-shine 4s ease-out infinite);
+            }
+        }
+    }

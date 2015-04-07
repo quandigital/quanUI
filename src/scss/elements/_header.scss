@@ -1,0 +1,22 @@
+header {
+    @include grid-column($columns: 12, $collapse: false);
+    background-color: $dark;
+    nav {
+        @include grid-column(12);
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style-type: none;
+            float: left;
+            padding: $padding-sm;
+            &:first-of-type {
+                padding-left: 0;
+            }
+            &:last-of-type {
+                padding-right: 0;
+            }
+        }    
+    }
+}
