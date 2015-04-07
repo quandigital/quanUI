@@ -6,6 +6,10 @@
         "dist/js/quanui.min.js"
     ],
     "ignore": [
-        "src"
+        "src",
+        ".gitignore",
+        "Gruntfile.js",
+        "index.html",
+        "package.json"
     ]
 }
