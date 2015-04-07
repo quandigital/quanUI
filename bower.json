@@ -11,6 +11,10 @@
         "Gruntfile.js",
         "index.html",
         "package.json",
-        "bower.json"
-    ]
+        "bower.json",
+        "bower_components"
+    ],
+    "dependencies": {
+        "jquery": "2.1.3"
+    }
 }

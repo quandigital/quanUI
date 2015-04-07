@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     
     var sourceFiles = [
-        'vendor/jquery.js',
+        // 'vendor/jquery.js',
         'vendor/jquery.initialize.js',
         '_getClasses.js',
         '_calcProgress.js',
