@@ -39,7 +39,8 @@ module.exports = function(grunt) {
                     includePaths: require('node-bourbon').includePaths
                 },
                 files: {
-                    '<%= cssDest %>/quanui.min.css': '<%= cssSrc %>/index.scss'
+                    '<%= cssDest %>/quanui.min.css': '<%= cssSrc %>/index.scss',
+                    '<%= cssDest %>/_quanui.min.scss': '<%= cssSrc %>/index.scss'
                 }        
             },
             dev: {

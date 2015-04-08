@@ -1,4 +1,4 @@
-jQuery and all third party plugins are included
+jQuery is required to run but not included. All other third party plugins are included:
 
 # third party
 
