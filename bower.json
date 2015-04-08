@@ -1,11 +1,7 @@
 {
     "name": "quanui",
     "version": "1.0.0",
-    "main": [
-        "dist/css/quanui.min.css",
-        "dist/css/_quanui.min.scss",
-        "dist/js/quanui.min.js"
-    ],
+    "main": "dist",
     "ignore": [
         "src",
         ".gitignore",

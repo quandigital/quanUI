@@ -1,0 +1,40 @@
+/**
+ * Foundation
+ */
+$include-html-grid-classes: false !default;
+$include-xl-html-grid-classes: false !default;
+
+$row-width: rem-calc(1000) !default;
+$total-columns: 12 !default;
+$column-gutter: rem-calc(30) !default;
+$default-float: left !default;
+
+$base-font-size: 100% !default;
+$base-line-height: 1.5 !default;
+
+$padding: .9375em !default;
+$padding-sm: .9375em * .5 !default;
+
+/**
+ * custom
+ */
+
+$light: rgba(240, 240, 240, 1.0);
+$white: rgba(250, 250, 250, 1.0);
+
+$gray-light: rgba(220, 220, 220, 1.0); 
+$gray-dark: rgba(180, 180, 180, 1.0); 
+
+$dark: rgba(39, 42, 52, 1.0);
+$black: rgba(29, 32, 39, 1.0);
+
+$green: rgba(70, 190, 141, 1.0);
+$red: rgba(249, 113, 100, 1.0);
+$blue: rgba(41, 128, 185, 1);
+
+$twitter: rgb(119, 167, 220);
+$facebook: rgb(69, 88, 151);
+
+$sans: 'Source Sans Pro', sans-serif;
+$serif: Georgia, serif;
+

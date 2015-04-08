@@ -20,6 +20,7 @@ module.exports = function(grunt) {
         cssSrc: '<%= srcDir %>/scss',
         jsSrc: '<%= srcDir %>/js',
         cssDest: '<%= webDir %>/css',
+        scssDest: '<%= webDir %>/scss',
         jsDest: '<%= webDir %>/js', 
 
         // clean the target folders
@@ -49,7 +50,7 @@ module.exports = function(grunt) {
                     includePaths: require('node-bourbon').includePaths
                 },
                 files: {
-                    '<%= cssDest %>/style.css': '<%= cssSrc %>/index.scss'
+                    '<%= cssDest %>/quanui.min.css': '<%= cssSrc %>/index.scss'
                 }
             }
         },
@@ -93,6 +94,21 @@ module.exports = function(grunt) {
             }
         },
 
+        sync: {
+            default: {
+                files: [
+                    {
+                        expand: true,     // Enable dynamic expansion.
+                        cwd: '<%= cssSrc %>',      // Src matches are relative to this path.
+                        src: '**/*.scss', // Actual pattern(s) to match.
+                        dest: '<%= scssDest %>',   // Destination path prefix.
+                        ext: '.scss',   // Dest filepaths will have this extension.
+                        extDot: 'last',   // Extensions in filenames begin after the last dot
+                    }
+                ]
+            }
+        },
+
         // watch task (dev only)
         watch: {
             grunt: { 
@@ -114,9 +130,10 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-sync');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('build', ['clean', 'sass:dist', 'uglify:dist']);
+    grunt.registerTask('build', ['clean', 'sass:dist', 'sync', 'uglify:dist']);
     grunt.registerTask('default', ['clean', 'sass:dev', 'uglify:dev', 'watch']);    
 }

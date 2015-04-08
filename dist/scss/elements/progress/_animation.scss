@@ -1,0 +1,22 @@
+@include keyframes(animate-stripes) {
+    0% {
+        background-position: 0 0; 
+    }
+    100% { 
+        background-position: -100px 0; 
+    }
+} 
+
+@include keyframes(animate-shine) {
+    0% {
+        opacity: 0; 
+        width: 0;
+    }
+    50% {
+        opacity: .1;
+    }
+    100% {
+        opacity: 0; 
+        width: 100%;
+    }
+}
