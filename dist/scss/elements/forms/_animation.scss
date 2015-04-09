@@ -1,0 +1,17 @@
+@include keyframes(quanui-blink-blue) {
+    0% {
+        background-color: $blue;
+    }
+    25% {
+        background-color: #fff;
+    }
+    50% {
+        background-color: $blue;
+    }
+    75% {
+        background-color: #fff;
+    }
+    100% {
+        background-color: $blue;
+    }
+}
