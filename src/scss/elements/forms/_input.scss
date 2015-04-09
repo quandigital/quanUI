@@ -1,5 +1,9 @@
 input {
     @include grid-column();
     padding: $padding-sm;
-    border: 1px solid $gray-dark;
+    border: 1px solid $dark;
+    background-color: $white;
+    &:focus {
+        outline: none;
+    }
 }

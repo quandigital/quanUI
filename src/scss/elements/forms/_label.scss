@@ -47,10 +47,6 @@ label {
             }
             input {
                 border: 0;
-                background-color: $white;
-                &:focus {
-                    outline: none;
-                }
             }
         }
         &.type-number {
@@ -61,6 +57,11 @@ label {
         &.type-text {
             &:before {
                 content: "\f48e";
+            }
+        }
+        &.type-search {
+            &:before {
+                content: "\f4a4";
             }
         }
     }

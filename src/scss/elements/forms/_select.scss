@@ -1,0 +1,95 @@
+$selectHighlight: $green;
+$selectHover: $blue;
+select {
+    display: none;
+    padding: $padding-sm;
+}
+
+.select-handle {
+    @include grid-column();
+    float: none;
+    position: relative;
+    z-index: 1;
+}
+
+    .select-value,
+    .select-options {
+        border: 1px solid $dark;
+    }
+
+    .select-value {
+        padding: $padding-sm;
+        background-color: #fff;
+        position: relative;
+        z-index: 1;
+        &:after {
+            content: "\f3d0";
+            font: {
+                family: Ionicons;
+            }
+            float: right;
+            line-height: .75;
+            padding: $padding-sm;
+        }
+        &.select-list-visible {
+            border-bottom: 0;
+            &:after {
+                @include transform(rotate(90deg));
+                line-height: .5;
+            }
+        }
+    }
+
+    .select-options {
+        list-style-type: none;
+        margin: 0;
+        padding: 0 $padding-sm;
+        background-color: #fff;
+        position: absolute;
+        height: 0px;
+        font-size: 1em;
+        margin-top: -1px;
+        pointer-events: none;
+        border-top: 0;
+        &.select-list-visible {
+            height: auto;
+            @include transition-duration(.4s);
+            pointer-events: all;
+            .select-option {
+                @for $i from 1 through 100 {
+                    &:nth-child(#{$i}) {
+                        @include transform(translatex(0));
+                        @include transition-duration($i * .07s);
+                        &:hover {
+                            background-color: $selectHover;
+                            color: $white;
+                            cursor: pointer;
+                            @include transition-duration(.1s);
+                            @include transition-delay(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+        .select-option {
+            background-color: #fff;
+            padding: $padding-sm;
+            margin: 0;
+            margin: {
+                left: $padding-sm * -1;
+                right: $padding-sm * -1;
+            }
+            position: relative;
+            line-height: 1.4;
+            @for $i from 1 through 100 {
+                &:nth-child(#{$i}) {
+                    @include transform(translateY(-31.75px * $i));
+                }
+            }
+            &.active {
+                @include animation-name(quanui-blink-blue);
+                @include animation-duration(.6s);
+            }
+        }
