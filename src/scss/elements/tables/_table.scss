@@ -2,6 +2,9 @@ $table-accent: $gray-light;
 $table-border-color: $gray-light;
 
 table {
+    display: table;
+    width: 100%;
+    float: left;
     font: {
         size: 1.1em;
     }
@@ -9,7 +12,6 @@ table {
         collapse: collapse;
         spacing: 0;
     }
-    width: 100%;
     margin: {
         top: 1em;
         bottom: 1em;

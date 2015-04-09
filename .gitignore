@@ -6,3 +6,4 @@ dist/js/*.js
 dist/js/*.map
 !dist/css/*.min.css
 !dist/js/*.min.js
+dist/css/quanui.css.map
