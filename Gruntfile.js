@@ -7,6 +7,7 @@ module.exports = function(grunt) {
         '_calcProgress.js',
         '_progress.js',
         '_input.js',
+        '_select.js',
         'app.js',
     ];
 
@@ -46,6 +47,7 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     outputStyle: 'expanded',
+                    sourceMap: true,
                     includePaths: require('node-bourbon').includePaths
                 },
                 files: {
@@ -66,7 +68,7 @@ module.exports = function(grunt) {
                         drop_console: true
                     },
                     report: 'min',
-                    preserveComments: 'some',
+                    preserveComments: false,
                 },
                 files: {
                     '<%= jsDest %>/quanui.min.js': sourceFiles.map(function (x){
