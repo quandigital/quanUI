@@ -85,7 +85,8 @@ select {
             line-height: 1.4;
             @for $i from 1 through 100 {
                 &:nth-child(#{$i}) {
-                    @include transform(translateY(-31.75px * $i));
+                    // @include transform(translateY(-31.75px * $i));
+                    @include transform(translateY(-100% * $i));
                 }
             }
             &.active {
