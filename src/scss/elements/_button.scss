@@ -3,7 +3,11 @@
     border: 2px solid $borderColor;
     color: $color;
     box-shadow: inset 0 -3px $highlightColor;
+    @include transition-duration(.2s);
     &:hover {
+        background-color: $highlightColor;
         cursor: pointer;
+        @include transition-duration(.5s);
+        color: invert($color);
     }
 }
