@@ -1,0 +1,50 @@
+.dataTables_wrapper, 
+.dataTables_length,
+.dataTables_filter {
+    @include grid-column();
+    margin-right: $padding;
+}
+
+.dataTables_processing,
+.dataTable,
+.dataTables_info {
+    @include grid-column(12);
+}
+
+
+.dataTables_paginate, 
+.paging_simple_numbers {
+    @include grid-column(12);
+}
+    .paginate_button {
+        @include grid-column();
+        @include button;
+        margin-right: 2px;
+    } 
+    .previous {}
+    .next {}
+    .disabled {}
+
+
+    .current,
+    .ellipsis {
+        @include grid-column();
+    }
+
+    .ellipsis {
+        @include button($borderColor: transparent, $highlightColor: transparent);
+    }
+
+    .current {
+        @include button($borderColor: $dark, $highlightColor: $green);
+        background-color: $green;
+    }
+
+    .current,
+    .ellipsis {
+        &:hover {
+            cursor: default;
+        }
+    }
+
+.no-footer {}
