@@ -45,6 +45,7 @@ a {
     color: $dark;
     @include transition-duration(.2s);
     outline: 0;
+    padding: 2px;
     &:hover {
         background: $green;
         @include transition-duration(.5s);
