@@ -6,4 +6,7 @@ input {
     &:focus {
         outline: none;
     }
+    &:-webkit-autofill {
+        -webkit-box-shadow:0 0 0 50px $white inset;
+    }
 }
