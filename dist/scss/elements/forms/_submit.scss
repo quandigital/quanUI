@@ -1,7 +1,6 @@
 input {
-    &[type="submit"] {
-        border: 0;
-        background-color: $dark;
-        color: $white;
+    &[type="submit"],
+    &[type="button"] {
+        @include button;
     }
 }

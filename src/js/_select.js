@@ -40,7 +40,7 @@
         handle = $(this).siblings('.select-handle');
         value = handle.children('.select-value');
         options = handle.children('.select-options');
-        width = options.width() + 25;
+        width = options.width() + 80;
 
         handle
             .width(width)

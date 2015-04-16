@@ -1,0 +1,38 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Backlink Crawler Login</title>
+    <link rel="stylesheet" href="dist/css/quanui.css">
+    </head>
+
+<body>
+<header>
+    <h1>Backlink Crawler Login</h1>
+    <nav>
+        <ul>
+            <li><a href="//192.168.33.10/">Home</a></li>
+                        <li class="logout"><a href="//192.168.33.10/user/logout">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="main-container">
+    
+    <div class="login">
+        <form action="login_check" method="post">
+            <label> 
+                E-mail
+                <input type="email" placeholder="E-Mail" name="user[email]">
+            </label>
+            <label>
+                Password
+                <input type="password" placeholder="Password" name="user[password]">
+            </label>
+            <input type="submit">
+        </form>
+    </div>
+</div>
+
+    <script src="src/js/vendor/jquery.js"></script>
+    <script src="dist/js/quanui.min.js"></script>
+
+</body></html>
