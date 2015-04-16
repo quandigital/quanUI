@@ -20,6 +20,7 @@ label {
             float: none;
             padding-left: 50px;
             border: 2px solid $dark;
+            background-color: $white;
             &:before {
                 font: {
                     family: Ionicons;
@@ -42,7 +43,6 @@ label {
                 top: 0;
                 bottom: 0;
                 left: 0;
-                background-color: $white;
                 width: 50px;
             }
             input {
