@@ -11,18 +11,60 @@
     @include grid-column(12);
 }
 
+.dataTable {
+    margin-top: $padding * 3;
+}
 
-.dataTables_paginate, 
-.paging_simple_numbers {
+.dataTables_paginate{
     @include grid-column(12);
+    padding: {
+        top: $padding-sm;
+        bottom: $padding-sm;
+    }
 }
     .paginate_button {
         @include grid-column();
         @include button;
         margin-right: 2px;
     } 
-    .previous {}
-    .next {}
+    
+    .previous,
+    .next {
+        position: relative;
+        &:before {
+            content: "";
+            width: 20px;
+            height: 1px;
+        }
+        &:after {
+            content: "\f3d6";
+            font: {
+                family: Ionicons;
+            }
+            position: absolute;
+            top: 33%;
+        }
+    }
+
+    .previous {
+        &:before {
+            float: left;
+        }
+        &:after {
+            content: "\f3d5";
+            left: 10px;
+        }
+    }
+
+    .next {
+        &:before {
+            float: right;
+        }
+        &:after {
+            content: "\f3d6";
+            right: 10px;
+        }
+    }
     .disabled {}
 
 
@@ -44,7 +86,13 @@
     .ellipsis {
         &:hover {
             cursor: default;
+            color: $dark;
         }
     }
+
+.dataTables_processing {
+    position: absolute;
+    margin-top: 73px;
+}
 
 .no-footer {}

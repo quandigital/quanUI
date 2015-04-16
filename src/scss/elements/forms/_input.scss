@@ -1,9 +1,12 @@
 input {
     @include grid-column();
     padding: $padding-sm;
-    border: 1px solid $dark;
+    border: 2px solid $dark;
     background-color: $white;
     &:focus {
         outline: none;
+    }
+    &:-webkit-autofill {
+        -webkit-box-shadow:0 0 0 50px $white inset;
     }
 }
