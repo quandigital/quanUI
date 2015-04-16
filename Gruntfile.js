@@ -28,8 +28,8 @@ module.exports = function(grunt) {
         clean: {
             folders: [
                 '<%= jsDest %>/*',
-                '!<%= jsDest %>/*.min.js',
                 '<%= cssDest %>/*',
+                '<%- scssDest %>',
             ]
         },
 
