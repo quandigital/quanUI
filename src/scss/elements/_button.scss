@@ -7,7 +7,7 @@
     &:hover {
         background-color: $highlightColor;
         cursor: pointer;
-        @include transition-duration(.5s);
+        @include transition-duration(.3s);
         color: invert($color);
     }
 }
