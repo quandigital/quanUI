@@ -11,6 +11,9 @@
     @include grid-column(12);
 }
 
+.dataTable {
+    margin-top: $padding * 3;
+}
 
 .dataTables_paginate{
     @include grid-column(12);
@@ -86,5 +89,10 @@
             color: $dark;
         }
     }
+
+.dataTables_processing {
+    position: absolute;
+    margin-top: 73px;
+}
 
 .no-footer {}
