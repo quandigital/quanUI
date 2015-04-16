@@ -9,10 +9,12 @@
         "src",
         ".gitignore",
         "Gruntfile.js",
-        "index.html",
         "package.json",
         "bower.json",
-        "bower_components"
+        "bower_components",
+        "index.html",
+        "login.html",
+        "result.html"
     ],
     "dependencies": {
         "jquery": "2.1.3"
