@@ -1,6 +1,6 @@
 {
     "name": "quanui",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "main": [
         "dist/css/quanui.min.css",
         "dist/js/quanui.min.js"
